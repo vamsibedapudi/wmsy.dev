@@ -79,3 +79,4 @@ For detailed troubleshooting information, see `DEPLOYMENT.md`:
 - DNS managed through Cloudflare
 - Public repository
 - Automatic SSL certificate renewal
+- **Auto-deployment**: Always git add, commit, and push changes immediately after making them
