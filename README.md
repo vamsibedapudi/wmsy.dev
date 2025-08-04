@@ -4,7 +4,7 @@ Personal website and portfolio for Vamsi Bedapudi.
 
 ## 🚀 Live Site
 
-Visit the site at: [https://vamsibedapudi.github.io/wmsy.dev/](https://vamsibedapudi.github.io/wmsy.dev/)
+Visit the site at: [https://wmsy.dev](https://wmsy.dev)
 
 ## 📁 Project Structure
 
@@ -12,8 +12,10 @@ Visit the site at: [https://vamsibedapudi.github.io/wmsy.dev/](https://vamsibeda
 website/
 ├── index.html      # Main HTML file
 ├── style.css       # Stylesheet
+├── CNAME          # Custom domain configuration
 ├── README.md       # This file
-└── CLAUDE.md       # Development context for Claude AI
+├── CLAUDE.md       # Development context for Claude AI
+└── DEPLOYMENT.md   # Deployment and troubleshooting guide
 ```
 
 ## 🛠️ Development
@@ -37,7 +39,9 @@ php -S localhost:8000
 
 ### Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch. Custom domain `wmsy.dev` is configured with SSL/TLS encryption.
+
+For detailed deployment information and troubleshooting, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## 📧 Contact
 

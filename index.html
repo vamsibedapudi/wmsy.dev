@@ -4,36 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vamsi Bedapudi</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+        .font-cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Rotating Text Animation */
+        .rotating-text-container {
+            display: inline-block;
+            position: relative;
+            height: 1.5em;
+            width: 9em;
+            text-align: center;
+            vertical-align: bottom;
+            overflow: hidden;
+        }
+        .rotating-text-item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(100%);
+            animation: rotate-text 8s linear infinite;
+        }
+        .rotating-text-item:nth-child(1) { animation-delay: 0s; }
+        .rotating-text-item:nth-child(2) { animation-delay: 2s; }
+        .rotating-text-item:nth-child(3) { animation-delay: 4s; }
+        .rotating-text-item:nth-child(4) { animation-delay: 6s; }
+
+        @keyframes rotate-text {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            5%, 20% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            25%, 100% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Vamsi Bedapudi</h1>
-        </header>
-        
-        <main>
-            <section class="intro">
-                <p>Software Engineer & Technology Enthusiast</p>
-            </section>
-            
-            <section class="contact">
-                <div class="contact-links">
-                    <a href="mailto:hello@wmsy.dev" class="contact-link">
-                        <span class="icon">✉</span>
-                        hello@wmsy.dev
-                    </a>
-                    <a href="https://github.com/vamsibedapudi" target="_blank" class="contact-link">
-                        <span class="icon">⚡</span>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/wamsib/" target="_blank" class="contact-link">
-                        <span class="icon">💼</span>
-                        LinkedIn
-                    </a>
-                </div>
-            </section>
-        </main>
+<body class="bg-gray-50 text-black">
+
+    <!-- Navigation -->
+    <div class="absolute top-4 right-4 sm:top-6 sm:right-8 md:right-16 z-10 flex items-center gap-4 md:gap-8">
+        <!-- Contact Link -->
+        <a href="#contact" class="text-base md:text-lg font-medium text-gray-800 focus:outline-none relative group pb-4">
+            Contact
+            <span class="absolute bottom-4 left-0 w-0 h-0.5 bg-[#FF2800] transition-all duration-300 group-hover:w-full"></span>
+        </a>
     </div>
+
+    <!-- Main Content -->
+    <div class="relative flex flex-col items-center justify-center min-h-screen text-center py-12 px-4">
+        <div class="mb-4">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold whitespace-nowrap">
+                <span class="font-cursive italic font-bold text-6xl sm:text-7xl md:text-8xl">Hi,</span> I'm Vamsi!
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-600 mt-2 flex items-center justify-center">
+                <span class="rotating-text-container mr-2">
+                    <span class="rotating-text-item">Living in</span>
+                    <span class="rotating-text-item">Working on LLMs in</span>
+                    <span class="rotating-text-item">Making oncallers in</span>
+                </span>
+                <svg class="w-6 h-6 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                San Francisco
+            </p>
+        </div>
+
+        <hr class="w-1/4 md:w-1/5 border-t border-[#FF2800] my-8">
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.linkedin.com/in/wamsib/" class="bg-white hover:bg-gray-200 text-black font-semibold py-3 px-6 rounded-xl shadow-md transition-transform transform hover:scale-105">LinkedIn</a>
+            <a href="https://github.com/vamsibedapudi" class="bg-white hover:bg-gray-200 text-black font-semibold py-3 px-6 rounded-xl shadow-md transition-transform transform hover:scale-105">GitHub</a>
+            <a href="mailto:hello@wmsy.dev" class="bg-white hover:bg-gray-200 text-black font-semibold py-3 px-6 rounded-xl shadow-md transition-transform transform hover:scale-105">Email</a>
+        </div>
+
+        <div class="absolute bottom-10">
+            <a href="#contact" aria-label="Scroll to contact section">
+                <svg class="w-8 h-8 text-[#FF2800] animate-bounce" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="w-full py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact</h2>
+            <p class="text-base md:text-lg text-gray-600 mb-4">Feel free to reach out!</p>
+            <p class="text-base md:text-lg text-gray-600 group inline-flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:hello@wmsy.dev" class="relative">
+                    hello@wmsy.dev
+                    <span class="absolute bottom-[-2px] left-0 w-full h-0.5 bg-[#FF2800] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="w-full text-center py-8 bg-white">
+        <p class="text-gray-500 transition-colors duration-300 group relative inline-block hover:text-gray-800">
+            Built with ❤️ by 
+            <a href="https://www.linkedin.com/in/wamsib/" target="_blank" rel="noopener noreferrer" class="font-bold relative">
+                Vamsi
+                <span class="absolute bottom-[-2px] left-0 w-full h-0.5 bg-[#FF2800] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
