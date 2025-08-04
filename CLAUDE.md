@@ -44,7 +44,7 @@ This is a simple personal website for Vamsi Bedapudi (wmsy.dev), hosted on GitHu
 ### Local Development
 ```bash
 # Serve locally
-python -m http.server 8000
+npx serve .
 ```
 
 ### Deployment
